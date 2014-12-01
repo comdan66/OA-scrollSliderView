@@ -1,0 +1,112 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2014 OA Wu Design
+ */
+
+@import "_oa";
+
+$silderWidrh: 360px;
+$silderHeight: 230px;
+
+$silderMarginTop: 20px;
+$silderMarginBottom: 20px;
+
+$silderArrowWidth: 40px;
+
+*.silder_panel {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  height: $silderHeight + ($silderMarginTop + $silderMarginBottom);
+  overflow: hidden;
+
+  .silders_container {
+    position: relative;
+    display: inline-block;
+    width: calc(100% - #{$silderArrowWidth} * 2);
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+
+    .silders {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+      left: 0;
+      width: 10000px;
+      height: 100%;
+
+      .silder {
+        position: relative;
+        float: left;
+        display: inline-block;
+        width: $silderWidrh;
+        height: calc(100% - #{$silderMarginTop + $silderMarginBottom});
+        margin: $silderMarginTop 20px $silderMarginBottom 5px;
+        background-color: #fff;
+
+        @include transition(all 0.3s ease-in-out);
+      }
+    }
+  }
+
+  .arrow-left, .arrow-right {
+    position: absolute;
+    display: inline-block;
+    width: $silderArrowWidth - 1px;
+    top: 0;
+    height: 100%;
+    line-height: $silderHeight;
+    font-size: 45px;
+    color: rgba(119, 119, 120, 1);
+    cursor: pointer;
+    z-index: 1;
+
+    svg {
+      vertical-align: baseline;
+
+      @include scale(1);
+      @include transition(all 0.3s ease);
+      * {
+        fill: rgba(39, 40, 34, 0.5);
+      }
+    }
+
+    @include text-shadow(-2px 0 3px rgba(0, 0, 0, 0.3));
+
+    &:hover {
+      color: rgba(70, 70, 71, 1);
+      @include text-shadow(-2px 0 5px rgba(0, 0, 0, 0.5));
+
+
+      svg {
+        @include scale(2);
+        * {
+          fill: rgba(39, 40, 34, 0.8);
+        }
+      }
+    }
+    &:after {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: "";
+      z-index: -2;
+      @include box-shadow(0 0 15px rgba(0,0,0,.6));
+    }
+  }
+  .arrow-left {
+    left: 0;
+    @include text-shadow(2px 0 3px rgba(0, 0, 0, 0.3));
+
+    &:hover {
+      @include text-shadow(2px 0 5px rgba(0, 0, 0, 0.5));
+    }
+  }
+  .arrow-right {
+    right: 0;
+  }
+}
