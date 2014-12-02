@@ -1,4 +1,4 @@
-# Welcome To OA's imgLiquid!
+# Welcome To OA's scrollSliderView!
 這是一個 based on [jQuery](http://jquery.com/) 的前端 library。
 
 ---
@@ -12,6 +12,9 @@
 * 這是一個前端 jQuery extend function，主要架構於 [jQuery](http://jquery.com/)。  
 
 * Demo 範例頁面: [http://comdan66.github.io/OA-scrollSliderView/](http://comdan66.github.io/OA-scrollSliderView/)
+
+* 此版本是支援 **responsive** 的頁面。
+
 
 <br/>
 ## 目錄
