@@ -3,23 +3,30 @@
   <head>
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Language" content="zh-tw">
-    <title>OA-sliderPreview</title>
+    <title>OA-scrollSliderView</title>
     
     <meta property="og:site_name" content="OA's GitHub" />
     <meta property="og:type" content="profile" />
-    <meta property="og:image" content="" />
-    <meta property="og:title" content="OA-sliderPreview" />
+    <meta property="og:image" content="http://comdan66.github.io/OA-scrollSliderView/img/og.png" />
+    <meta property="og:title" content="OA-scrollSliderView" />
     <meta property="og:locale" content="zh_TW" />
-    <meta property="og:description" content="" />
-    <meta property="og:url" content="http://comdan66.github.io/OA-sliderPreview/" />
+    <meta property="og:description" content="這是一個前端 jQuery extend function，主要架構於 jQuery。Demo 範例頁面: http://comdan66.github.io/OA-scrollSliderView/..." />
+    <meta property="og:url" content="http://comdan66.github.io/OA-scrollSliderView/" />
 
-    <meta name="description" content="" />
-    <meta name="keywords" content="吳政賢 | OA Wu | OA-sliderPreview | sliderPreview | jQuery | javascript | html | css" />
+    <meta name="description" content="這是一個前端 jQuery extend function，主要架構於 jQuery。Demo 範例頁面: http://comdan66.github.io/OA-scrollSliderView/..." />
+    <meta name="keywords" content="吳政賢 | OA Wu | OA-scrollSliderView | scrollSliderView | jQuery | scroll | slider | javascript | html | css" />
     <meta name="author" content="吳政賢(OA Wu)" />
 
     <link href="./css/frame.css" rel="stylesheet" type="text/css">
     <script src="./res/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" /></script>
-    <script src="./res/jquery_v1.10.2/jquery-1.10.2.min.js" language="javascript" type="text/javascript" /></script>
+
+    <link href="./res/prettify/prettify.css" rel="stylesheet" type="text/css">
+    <script src="./res/prettify/prettify.js" language="javascript" type="text/javascript" /></script>
+    
+    <script src="./res/oa-imgLiquid.js" language="javascript" type="text/javascript" /></script>
+
+    <link href="./css/oa-tab.css" rel="stylesheet" type="text/css">
+    <script src="./res/oa-tab.js" language="javascript" type="text/javascript" /></script>
 
     <link href="./css/oa-scrollSliderView.css" rel="stylesheet" type="text/css">
     <script src="./res/oa-scrollSliderView.js" language="javascript" type="text/javascript" /></script>
@@ -27,20 +34,300 @@
     <link href="./css/index.css" rel="stylesheet" type="text/css">
     <script src="./res/index.js" language="javascript" type="text/javascript" /></script>
 
-
   </head>
   <body lang="zh-tw">
     <div id='container'>
+        
+      <div class='tab'>
+        <div class='title'>說明</div>
+        <div class='title'>Options</div>
+        <div class='title'>Data attr</div>
+        <div class='title'>關於</div>
+        <div class='panel'>
 
-      <div class='silders'>
-        <div class='silder'>asd</div>
-        <div class='silder'>asd</div>
-        <div class='silder'>asd</div>
-        <div class='silder'>asd</div>
-        <div class='silder'>asd</div>
-        <div class='silder'>asd</div>
-        <div class='silder'>asd</div>
+          1. 加入 jquery.js
+<pre class='html prettyprint' data-path='html'>
+  &lt;script src=&quot;jquery-1.10.2.min.js&quot; language=&quot;javascript&quot; type=&quot;text/javascript&quot; /&gt;&lt;/script&gt;
+</pre>
+<br />
+          2. 加入 oa-scrollSliderView 的 css、js
+<pre class='html prettyprint' data-path='html'>
+  &lt;link href=&quot;oa-scrollSliderView.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+  &lt;script src=&quot;oa-scrollSliderView.js&quot; language=&quot;javascript&quot; type=&quot;text/javascript&quot; /&gt;&lt;/script&gt;
+</pre>
+<br />
+          3. Html sample
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders'&gt;
+    &lt;div class='silder'&gt;&lt;img src='img1.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img2.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img3.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img4.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img5.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img6.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img7.jpg' /&gt;&lt;/div&gt;
+    &lt;div class='silder'&gt;&lt;img src='img8.jpg' /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<br />
+          4. Javascript sample
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ();
+</pre>
+<br />
+          5. 效果
+          <div class='silders'>
+            <div class='silder'><img src='img/demo1.jpg' /></div>
+            <div class='silder'><img src='img/demo2.jpg' /></div>
+            <div class='silder'><img src='img/demo3.jpg' /></div>
+            <div class='silder'><img src='img/demo4.jpg' /></div>
+            <div class='silder'><img src='img/demo5.jpg' /></div>
+            <div class='silder'><img src='img/demo6.jpg' /></div>
+            <div class='silder'><img src='img/demo7.jpg' /></div>
+            <div class='silder'><img src='img/demo8.jpg' /></div>
+          </div>
+        </div>
+
+        <div class='panel'>
+<!-- ------------------------------------------------------------ -->
+          <h2>selector</h2>
+          <div class='demo'>
+            指定子元素的 selector 條件，預設值 .silder
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders'&gt;
+    &lt;div class='my_silder'&gt;div 1&lt;/div&gt;
+    &lt;div class='my_silder'&gt;div 2&lt;/div&gt;
+    &lt;div class='my_silder'&gt;div 3&lt;/div&gt;
+    &lt;div class='my_silder'&gt;div 4&lt;/div&gt;
+    &lt;div class='my_silder'&gt;div 5&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ({
+    selector: '.my_silder'
+  });
+</pre>
+            <div class='silders'>
+              <div class='silder'>div 1</div>
+              <div class='silder'>div 2</div>
+              <div class='silder'>div 3</div>
+              <div class='silder'>div 4</div>
+              <div class='silder'>div 5</div>
+            </div>
+          </div>
+<!-- ------------------------------------------------------------ -->
+          <h2>maxCount</h2>
+          <div class='demo'>
+            設定最大數量，當為 0 時，則不設定，預設值 0
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders'&gt;
+    &lt;div class='silder'&gt;div 1&lt;/div&gt;
+    &lt;div class='silder'&gt;div 2&lt;/div&gt;
+    &lt;div class='silder'&gt;div 3&lt;/div&gt;
+    &lt;div class='silder'&gt;div 4&lt;/div&gt;
+    &lt;div class='silder'&gt;div 5&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ({
+    maxCount: 3
+  });
+</pre>
+            <div class='silders'>
+              <div class='silder'>div 1</div>
+              <div class='silder'>div 2</div>
+              <div class='silder'>div 3</div>
+            </div>
+          </div>
+<!-- ------------------------------------------------------------ -->
+          <h2>sildersWidth</h2>
+          <div class='demo'>
+            整體 silders 的總寬度(包含箭頭)，預設值 100%
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders'&gt;
+    &lt;div class='silder'&gt;div 1&lt;/div&gt;
+    &lt;div class='silder'&gt;div 2&lt;/div&gt;
+    &lt;div class='silder'&gt;div 3&lt;/div&gt;
+    &lt;div class='silder'&gt;div 4&lt;/div&gt;
+    &lt;div class='silder'&gt;div 5&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ({
+    sildersWidth: '500px'
+  });
+</pre>
+            <div class='silders' data-sildersWidth='500px'>
+              <div class='silder'>div 1</div>
+              <div class='silder'>div 2</div>
+              <div class='silder'>div 3</div>
+              <div class='silder'>div 4</div>
+              <div class='silder'>div 5</div>
+            </div>
+          </div>
+<!-- ------------------------------------------------------------ -->
+          <h2>arrow</h2>
+          <div class='demo'>
+            箭頭物件的設定，其中包含了:<br />
+            - width，寬度，預設值 40px<br />
+            - leftSvg，左邊 svg 圖示<br />
+            - rightSvg，右邊 svg 圖示
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders'&gt;
+    &lt;div class='silder'&gt;div 1&lt;/div&gt;
+    &lt;div class='silder'&gt;div 2&lt;/div&gt;
+    &lt;div class='silder'&gt;div 3&lt;/div&gt;
+    &lt;div class='silder'&gt;div 4&lt;/div&gt;
+    &lt;div class='silder'&gt;div 5&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ({
+    arrow: {
+      width: '70px',
+      leftSvg: '&lt;svg version=&quot;1.1&quot; xmln...', // svg tag file
+      rightSvg: '&lt;svg version=&quot;1.1&quot; xmln...' // svg tag file
+    }
+  });
+</pre>
+            <div class='silders' data-arrow_width='70px' data-arrow_leftSvg='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="32" viewBox="0 0 12 32"><g id="icomoon-ignore"></g><path d="M8 14v-4l-8 6 8 6v-4h4v-4h-4z" fill="#000000"></path></svg>' data-arrow_rightSvg='<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="32" viewBox="0 0 12 32"><g id="icomoon-ignore"></g><path d="M12 16l-8-6v4h-4v4h4v4l8-6z" fill="#000000"></path></svg>'>
+              <div class='silder'>div 1</div>
+              <div class='silder'>div 2</div>
+              <div class='silder'>div 3</div>
+              <div class='silder'>div 4</div>
+              <div class='silder'>div 5</div>
+            </div>
+          </div>
+<!-- ------------------------------------------------------------ -->
+          <h2>silder</h2>
+          <div class='demo'>
+            單一子元素的設定，其中包含了:<br />
+            - width，寬度，預設值 160px<br />
+            - height，高度，預設值 100px<br />
+            - marginTop，上方 margin 值，預設值 10px<br />
+            - marginBottom，下邊 margin 值，預設值 10px<br />
+            - marginLeft，左邊 margin 值，預設值 10px<br />
+            - marginRight，右邊 margin 值，預設值 20px<br />
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders'&gt;
+    &lt;div class='silder'&gt;div 1&lt;/div&gt;
+    &lt;div class='silder'&gt;div 2&lt;/div&gt;
+    &lt;div class='silder'&gt;div 3&lt;/div&gt;
+    &lt;div class='silder'&gt;div 4&lt;/div&gt;
+    &lt;div class='silder'&gt;div 5&lt;/div&gt;
+    &lt;div class='silder'&gt;div 6&lt;/div&gt;
+    &lt;div class='silder'&gt;div 7&lt;/div&gt;
+    &lt;div class='silder'&gt;div 8&lt;/div&gt;
+    &lt;div class='silder'&gt;div 9&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ({
+    silder: {
+      width: '100px',
+      height: '50px',
+      marginTop: '25px',
+      marginBottom: '0',
+      marginRight: '30px',
+      marginLeft: '20px'
+    }
+  });
+</pre>
+            <div class='silders' data-silder_width='100px' data-silder_height='50px' data-silder_marginTop='25px' data-silder_marginBottom='0' data-silder_marginRight='30px' data-silder_marginLeft='20px'>
+              <div class='silder'>div 1</div>
+              <div class='silder'>div 2</div>
+              <div class='silder'>div 3</div>
+              <div class='silder'>div 4</div>
+              <div class='silder'>div 5</div>
+              <div class='silder'>div 6</div>
+              <div class='silder'>div 7</div>
+              <div class='silder'>div 8</div>
+              <div class='silder'>div 9</div>
+            </div>
+          </div>
+<!-- ------------------------------------------------------------ -->
+        </div>
+
+        <div class='panel'>
+          <h2>Option、data 對應</h2>
+          <div class='demo'>
+<pre style='line-height: 20px;'>
+  selector       - data-selector
+  
+  maxCount       - data-maxCount
+  
+  sildersWidth   - data-sildersWidth
+
+  arrow
+    width        - data-arrow_width
+    leftSvg      - data-arrow_leftSvg
+    rightSvg     - data-arrow_rightSvg
+  
+  silder
+    width        - data-silder_width
+    height       - data-silder_height
+    marginTop    - data-silder_marginTop
+    marginBottom - data-silder_marginBottom
+    marginRight  - data-silder_marginRight
+    marginLeft   - data-silder_marginLeft
+</pre>
+          </div>
+<!-- ------------------------------------------------------------ -->
+          <h2>Ex: data-silder_width</h2>
+          <div class='demo'>
+            使用 thml tag data attribute 設定，其設定值權限最大
+<pre class='html prettyprint' data-path='html'>
+  &lt;div class='silders' data-silder_width='100px'&gt;
+    &lt;div class='silder'&gt;div 1&lt;/div&gt;
+    &lt;div class='silder'&gt;div 2&lt;/div&gt;
+    &lt;div class='silder'&gt;div 3&lt;/div&gt;
+    &lt;div class='silder'&gt;div 4&lt;/div&gt;
+    &lt;div class='silder'&gt;div 5&lt;/div&gt;
+    &lt;div class='silder'&gt;div 6&lt;/div&gt;
+    &lt;div class='silder'&gt;div 7&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+<pre class='javascript prettyprint' data-path='javascript'>
+  $('.silders').OAscrollSliderView ();
+</pre>
+            <div class='silders' data-silder_width='100px'>
+              <div class='silder'>div 1</div>
+              <div class='silder'>div 2</div>
+              <div class='silder'>div 3</div>
+              <div class='silder'>div 4</div>
+              <div class='silder'>div 5</div>
+              <div class='silder'>div 6</div>
+              <div class='silder'>div 7</div>
+            </div>
+          </div>
+<!-- ------------------------------------------------------------ -->
+        </div>
+        <div class='panel'>
+          <div class='about'>
+            <div class='info clearfix'>
+              <div class='key'>作者名稱</div>
+              <div class='value'>OA Wu</div>
+            </div>
+            <div class='info clearfix'>
+              <div class='key'>作品名稱</div>
+              <div class='value'>OAScrollSliderView</div>
+            </div>
+            <div class='info clearfix'>
+              <div class='key'>最新版本</div>
+              <div class='value'>1.0.0</div>
+            </div>
+            <div class='info clearfix'>
+              <div class='key'>GitHub</div>
+              <div class='value'><a href='https://github.com/comdan66/OA-scrollSliderView' target='_blank'>OA-scrollSliderView</a></div>
+            </div>
+            <div class='info clearfix'>
+              <div class='key'>更新日期</div>
+              <div class='value'>2014/12/02</div>
+            </div>
+          </div>
+        </div>
       </div>
+
 
     </div>
   </body>
