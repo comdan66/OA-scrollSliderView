@@ -13,5 +13,8 @@ ga('send', 'pageview');
 
 $(function () {
   $('.www').OAscrollSliderView ();
+  $('.ww').OAscrollSliderView ({silder: {
+          height: '130px',
+        }});
 
 });
