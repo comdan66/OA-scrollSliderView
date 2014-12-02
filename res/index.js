@@ -12,9 +12,7 @@ ga('create', 'UA-46121102-7', 'auto');
 ga('send', 'pageview');
 
 $(function () {
-  $('.www').OAscrollSliderView ();
-  $('.ww').OAscrollSliderView ({silder: {
-          height: '130px',
-        }});
+  $('.silders').OAscrollSliderView ();
+
 
 });

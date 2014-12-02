@@ -11,13 +11,13 @@
   $.fn.extend ({
     OAscrollSliderView: function (opt) {
       var d4Opt = {
-        selector: '.eee',
+        selector: '.silder',
         defaultCount: 10,
         sildersWidth: '100%',
         arrow: {
           width: '40px',
-          leftSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><g id="icomoon-ignore"></g><path d="M14.414 5.586c-0.78-0.781-2.048-0.781-2.828 0l-6.415 6.414 6.415 6.414c0.39 0.391 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586c0.781-0.781 0.781-2.047 0-2.828l-3.585-3.586 3.585-3.586c0.781-0.781 0.781-2.047 0-2.828z" fill="#000000"></path></svg>',
-          rightSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24"><g id="icomoon-ignore"></g><path d="M8.586 5.586c-0.781 0.781-0.781 2.047 0 2.828l3.585 3.586-3.585 3.586c-0.781 0.781-0.781 2.047 0 2.828 0.39 0.391 0.902 0.586 1.414 0.586s1.024-0.195 1.414-0.586l6.415-6.414-6.415-6.414c-0.78-0.781-2.048-0.781-2.828 0z" fill="#000000"></path></svg>',
+          leftSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="28" viewBox="0 0 20 28"><g id="icomoon-ignore"></g><path d="M18.297 4.703l-8.297 8.297 8.297 8.297q0.297 0.297 0.297 0.703t-0.297 0.703l-2.594 2.594q-0.297 0.297-0.703 0.297t-0.703-0.297l-11.594-11.594q-0.297-0.297-0.297-0.703t0.297-0.703l11.594-11.594q0.297-0.297 0.703-0.297t0.703 0.297l2.594 2.594q0.297 0.297 0.297 0.703t-0.297 0.703z" fill="#000000"></path></svg>',
+          rightSvg: '<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="28" viewBox="0 0 20 28"><g id="icomoon-ignore"></g><path d="M17.297 13.703l-11.594 11.594q-0.297 0.297-0.703 0.297t-0.703-0.297l-2.594-2.594q-0.297-0.297-0.297-0.703t0.297-0.703l8.297-8.297-8.297-8.297q-0.297-0.297-0.297-0.703t0.297-0.703l2.594-2.594q0.297-0.297 0.703-0.297t0.703 0.297l11.594 11.594q0.297 0.297 0.297 0.703t-0.297 0.703z" fill="#000000"></path></svg>',
         },
         silder: {
           width: '360px',
@@ -25,7 +25,7 @@
           marginTop: '10px',
           marginBottom: '10px',
           marginRight: '20px',
-          marginLeft: '5px'
+          marginLeft: '10px'
         }
       },
       init = function (opt) {
@@ -84,7 +84,7 @@
 
           scrollTo (silderWidth * $(this).data ('count'), 300);
         }.bind ($(this)));
-        
+
         $(this).removeClass ('oa-scrollSliderView-hide');
       }
 
