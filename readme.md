@@ -55,15 +55,15 @@
 
 	```html
 	  <div class='silders'>
-	  <div class='silder'><img src='img1.jpg' /></div>
-	  <div class='silder'><img src='img2.jpg' /></div>
-	  <div class='silder'><img src='img3.jpg' /></div>
-	  <div class='silder'><img src='img4.jpg' /></div>
-	  <div class='silder'><img src='img5.jpg' /></div>
-	  <div class='silder'><img src='img6.jpg' /></div>
-	  <div class='silder'><img src='img7.jpg' /></div>
-	  <div class='silder'><img src='img8.jpg' /></div>
-	</div>
+	    <div class='silder'><img src='img1.jpg' /></div>
+	    <div class='silder'><img src='img2.jpg' /></div>
+	    <div class='silder'><img src='img3.jpg' /></div>
+	    <div class='silder'><img src='img4.jpg' /></div>
+	    <div class='silder'><img src='img5.jpg' /></div>
+	    <div class='silder'><img src='img6.jpg' /></div>
+	    <div class='silder'><img src='img7.jpg' /></div>
+	    <div class='silder'><img src='img8.jpg' /></div>
+	  </div>
 ```
 
 * <a name="Javascript sample"></a>Javascript sample
