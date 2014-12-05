@@ -247,10 +247,10 @@
 
 * E-mail - <comdan66@gmail.com>
 
-* 作品名稱 - OAScrollSliderView
+* 作品名稱 - OA-scrollSliderView
 
-* 最新版本 - 1.0.0
+* 最新版本 - 1.0.1
 
 * GitHub - [OA-scrollSliderView](https://github.com/comdan66/OA-scrollSliderView)
 
-* 更新日期 - 2014/12/02
+* 更新日期 - 2014/12/05
